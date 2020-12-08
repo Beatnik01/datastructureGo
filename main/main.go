@@ -4,6 +4,23 @@ import (
 	"datastruct"
 	"fmt"
 )
+
+func main() {
+	// 같은 값은 같은 결과가 나와야한다. 다른 값은 다른 결과가 나와야한다.
+	fmt.Println("abcde = ", datastruct.Hash("abcde"))
+	fmt.Println("abcdf = ", datastruct.Hash("abcdf"))
+	
+	m := datastruct.CreateMap()
+	m.Add("AAA", "0107777777")
+	m.Add("BBB", "0108888888")
+	m.Add("CCC", "0109999999")
+
+	fmt.Println("AAA = ",m.Get("AAA"))
+	fmt.Println("CCC = ",m.Get("CCC"))
+}
+
+// Tree
+/*
 func main() {
 	tree := datastruct.NewBinaryTree(5)
 	tree.Root.AddNode(3)
@@ -30,3 +47,4 @@ func main() {
 		fmt.Println("not found 11 cnt", cnt)
 	}
 }
+*/
